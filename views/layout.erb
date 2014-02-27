@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practice Project</title>
+
+<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="/application.css"> -->
+<script src="/jquery-1.11.0.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<script src="/application.js"></script>
+</head>
+
+<body style="padding-left: 50px;" bgcolor=#999966>
+
+<div class="container">
+    <%if @avatar %>
+    <img id="avat">
+    <% end %>
+	<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<body bgcolor=#FFFF66>
+
+<h2>CONGRATULATIONS!</h2>
+<div>
+<p>Good job, <%= session[:guestname] %>, you made it!</p><cd>empty avatar</cd>
+</div>
+Which of the images below would you like as your avatar?
+
+</br>
+<form id="avatar_choice">
+
+
+<a><input name="m_r" type="image" src='/images/m_r.jpg' method='post' ></a>
+<a><input name="w_r" type="image" src='/images/w_r.jpg' method='post' ></a>
+<a><input name="m_b" type="image" src='/images/m_b.jpg' method='post' ></a>
+<a><input name="m_m" type="image" src='/images/m_m.jpg' method='post' ></a>
+<a><input name="w_m" type="image" src='/images/w_m.jpg' method='post' ></a>
+<a><input name="w_b" type="image" src='/images/w_b.jpg' method='post' ></a>
+</form>
+</body>
