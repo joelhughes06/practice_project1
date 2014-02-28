@@ -52,7 +52,7 @@ post '/landing' do
 	session[:avat] = params[:avat]
 end
 
-def avatar()
+def avatar
 	"<img src='session[:avat]'>"
 end
 

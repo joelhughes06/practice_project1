@@ -5,17 +5,17 @@
 <h4>Click on the image below you'd like as your avatar, <%= session[:guestname] %>.</h4>
 </div>
 <br>
-<form action='/select_avatar' method = 'post' name='avat'>
+<div class="well">
 
-
-<a><input name="avat" type="image" src='/images/m_r.jpg' ></a>
-<a><input name="avat" type="image" src='/images/w_r.jpg' ></a>
-<a><input name="avat" type="image" src='/images/m_b.jpg' ></a>
-<a><input name="avat" type="image" src='/images/m_m.jpg' ></a>
-<a><input name="avat" type="image" src='/images/w_m.jpg' ></a>
-<a><input name="avat" type="image" src='/images/w_b.jpg' ></a>
+<form action='/select_avatar' method='post'>
+    <img class="avatar-option"  src='/images/m_r.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/w_r.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/m_b.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/m_m.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/w_m.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/w_b.jpg' style="cursor: pointer;" />
 </form>
 
 <%= session[:avat] %>
-
+</div>
 </body>
