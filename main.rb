@@ -20,25 +20,36 @@ post '/form' do
 	if params[:guestname].empty?
 		@error = "Name is required."
 		halt erb(:form)
-	else
+	end	
 	session[:guestname] = params[:guestname]
-	"#{session[:guestname]}, you are now ready to use the site."
-	erb :dashboard
-	end
+	redirect '/select_avatar'
+
 end
 
-get '/form' do
-	erb :dashboard
+get '/select_avatar' do
+#  if params[:avat].empty?
+  	erb :dashboard
+#  end
+end	
+
+post '/select_avatar' do
+#	if params[:avat].empty?
+#		@error = "#{session[:guestname]}, please click on an avatar."
+#		halt erb(:form)
+#	else
+		session[:avat] = params[:avat]
+
+#	end
+	redirect '/landing'
+
 end
 
-post '/form' do
-	if params[:avatar_choice].empty?
-		@error = "#{session[:guestname]}, please click on an avatar."
-		halt erb(:form)
-	else
-		session[:avatar_choice] = params[:avatar_choice]
-		
-	end
+get '/landing' do
+	erb :landing
+end
+
+post '/landing' do
+	session[:avat] = params[:avat]
 end
 
 def avatar

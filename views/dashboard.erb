@@ -2,19 +2,22 @@
 
 <h2>CONGRATULATIONS!</h2>
 <div>
-<p>Good job, <%= session[:guestname] %>, you made it!</p><cd>empty avatar</cd>
+<p>Good job, <%= session[:guestname] %>, you made it!</p>
 </div>
-Which of the images below would you like as your avatar?
+Which of the images below would you like as your avatar, <%= session[:guestname] %>?
 
-</br>
-<form id="avatar_choice">
+<br>
+<form action='/select_avatar' method = 'post'>
 
 
-<a><input name="m_r" type="image" src='/images/m_r.jpg' method='post' ></a>
-<a><input name="w_r" type="image" src='/images/w_r.jpg' method='post' ></a>
-<a><input name="m_b" type="image" src='/images/m_b.jpg' method='post' ></a>
-<a><input name="m_m" type="image" src='/images/m_m.jpg' method='post' ></a>
-<a><input name="w_m" type="image" src='/images/w_m.jpg' method='post' ></a>
-<a><input name="w_b" type="image" src='/images/w_b.jpg' method='post' ></a>
+<a><input name="avat" type="image" src='/images/m_r.jpg' ></a>
+<a><input name="avat" type="image" src='/images/w_r.jpg' ></a>
+<a><input name="avat" type="image" src='/images/m_b.jpg' ></a>
+<a><input name="avat" type="image" src='/images/m_m.jpg' ></a>
+<a><input name="avat" type="image" src='/images/w_m.jpg' ></a>
+<a><input name="avat" type="image" src='/images/w_b.jpg' ></a>
 </form>
+
+<%= session[:avat] %>
+
 </body>
