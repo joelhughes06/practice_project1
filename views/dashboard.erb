@@ -1,13 +1,11 @@
 <body bgcolor=#FFFF66>
 
-<h2>CONGRATULATIONS!</h2>
+<h2>Step Two:</h2>
 <div>
-<p>Good job, <%= session[:guestname] %>, you made it!</p>
+<h4>Click on the image below you'd like as your avatar, <%= session[:guestname] %>.</h4>
 </div>
-Which of the images below would you like as your avatar, <%= session[:guestname] %>?
-
 <br>
-<form action='/select_avatar' method = 'post'>
+<form action='/select_avatar' method = 'post' name='avat'>
 
 
 <a><input name="avat" type="image" src='/images/m_r.jpg' ></a>
