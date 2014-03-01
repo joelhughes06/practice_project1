@@ -1,7 +1,25 @@
 <body bgcolor=#FFFF66>
-
+<div id="leftcolumn">
 <h2><%= session[:guestname] %></h2>
 
 <img src="<%= session[:avat] %>">
+</div>
+<br/>
+<div class="well" id="main">
 
+  <% session[:guestcards].each do |card| %>
+    <%= card_image(card) %>
+  <% end %>
+
+<br />
+<br />
+
+<form action="/landing/nextcard" method="post">
+<input type="submit" class="btn btn-primary" value="click for your next card" >
+</form>
+<form action="/landing/running_tally" method="post">
+Your total is <%= @running_tally %>
+</form>
+
+  </div>
 </body>
